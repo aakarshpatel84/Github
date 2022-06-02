@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section{
+        margin: auto;
+        text-align: center;
+        
+    }
+    div{
+        margin-top: 10px;
+        background-color: pink;
+    }
+    input{
+        background-color: pink;
+    }
+    h4{
+        border: 1px solid red;
+        width: 30%;
+        margin: auto;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: rgb(135, 223, 234);
+        border-radius: 9px;
+    }
+    button{
+        background-color: rgb(136, 224, 68);
+    }
+</style>
+
+<body>
+    <section>
+    <input id="first val" type="text" placeholder="Enter First Value">
+    <input id="Second Val" type="text" placeholder="Enter Second value">
+    <div></div>
+    <button onclick="Add()">Add</button>
+    <button onclick="Subtract()">Subtract</button>
+    <button onclick="Multiply()">Multiply</button>
+    <button onclick="Divide()">Divide</button>
+    <button onclick="defalut()">Clear</button>
+</div>
+    <h4 id="display">See Result</h4>
+</section>
+</body>
+
+</html>
+<script>
+    function Add() {
+        let x = document.getElementById("first val").value
+        let y = document.getElementById("Second Val").value
+        x = Number(x)
+        y = Number(y)
+        let add = (x + y)
+        document.getElementById("display").innerText = add
+    }
+
+    function Subtract() {
+        let x = document.getElementById("first val").value
+        let y = document.getElementById("Second Val").value
+        x = Number(x)
+        y = Number(y)
+        let subtract = (x - y)
+        document.getElementById("display").innerText = subtract
+
+
+    }
+
+    function Multiply() {
+        let x = document.getElementById("first val").value
+        let y = document.getElementById("Second Val").value
+        x = Number(x)
+        y = Number(y)
+        let multiply = (x * y)
+        document.getElementById("display").innerText = multiply
+
+
+    }
+
+    function Divide() {
+        let x = document.getElementById("first val").value
+        let y = document.getElementById("Second Val").value
+        x = Number(x)
+        y = Number(y)
+        let division = (x/y)
+        document.getElementById("display").innerText = division
+
+
+    }
+    function defalut() {
+        document.getElementById("display").innerText = "Thank You"
+    }
+
+</script>
