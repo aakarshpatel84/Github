@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Calculator</title>
+    <style>
+        h1 {
+            color: teal;
+            text-align: center;
+        }
+
+        #parent {
+            width: 250px;
+            height: 318px;
+            border: 1px solid rgb(249, 249, 249);
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            
+
+        }
+
+        #display {
+            width: 80%;
+            height: 20%;
+            font-size: 30px;
+            margin: auto;
+            margin-top: 28px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
+
+
+        }
+        
+
+        #keyboard {
+            display: grid;
+            grid-template-columns: repeat(4,40px);
+            grid-template-rows: repeat(4,40px);
+            gap: 10px;
+            justify-content: center;
+            margin-top: 22px;
+            
+
+        }
+        #keyboard>div{
+           
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+            
+            
+            
+
+        }
+        #keyboard>div:hover{
+            background-color: rgb(159, 175, 121);
+            color: white;
+        }
+        
+        .black{
+            color: white;
+            background-color: black;
+        }
+        .red{
+            color: white;
+            background-color: red;
+        }
+         
+    </style>
+</head>
+
+<body>
+    <h1>Masai Calculator</h1>
+    <div id="parent">
+        <div id="display">
+            <!-- display number hare -->
+
+        </div>
+            <div id="keyboard">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div class="black">+</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div class="black">-</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div class="black">*</div>
+                <div class="red">C</div>
+                <div>0</div>
+                <div class="black">=</div>
+                <div class="black">/</div>
+
+            </div>
+        
+
+
+    </div>
+</body>
+
+</html>
+<script>
+    let keys = document.querySelectorAll("#keyboard>div")
+    
+    beg = "";
+    for(let i = 0;i<keys.length;i++){
+        keys[i].addEventListener("click",calculator)
+        
+    }
+    function calculator(event){
+        
+        let tv =event.target.innerText
+        if(tv=="C"){
+            beg = ""
+            document.querySelector("#display").innerText = "";
+        }
+        else if (tv=="="){
+            document.querySelector("#display").innerText =eval (beg);
+            console.log(eval(beg))
+        }
+        else{
+            
+            beg =beg+tv
+            // console.log(beg)
+            let box =document.querySelector("#display").innerText = beg
+            console.log(box)
+        }
+        
+      
+    }
+
+
+</script>
