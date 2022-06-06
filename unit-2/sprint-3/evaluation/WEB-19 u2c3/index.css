@@ -1,0 +1,19 @@
+/* Fill CSS here */
+
+table{
+    width: 95%;
+    height: 20px;
+    
+    
+}
+thead{
+    background-color: rgb(43 97 158);
+    padding: 25px;
+    text-align: center;
+    
+}
+
+td{
+    text-align: center;
+    margin: 20px;
+}
