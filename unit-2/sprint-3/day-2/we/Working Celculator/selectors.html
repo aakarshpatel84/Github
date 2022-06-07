@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Practise Selectors</title>
+</head>
+
+<body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button>Change H1</button>
+    <button>Change H3</button>
+    <button>Change H5</button>
+    <button>Change Green</button>
+    <button>Change Red</button>
+    <button>Change Blue</button>
+    <script>
+    </script>
+</body>
+
+</html>
+<script>
+    document.querySelector("button").addEventListener("click", myFunction)
+    function myFunction() {
+        // console.log("someone clicked me")
+        document.querySelector("h1").style.color = "red";
+
+    }
+    document.querySelector("button+button").addEventListener("click", green)
+    function green() {
+        // console.log("someone clicked me")
+        x = document.querySelectorAll("h3")
+        for (i = 0; i < x.length; i++) {
+            x[i].style.color = "green"
+        }
+
+
+    }
+    document.querySelector("button+button+button").addEventListener("click", bl)
+    function bl() {
+        // console.log("someone clicked me")
+        let y = document.querySelectorAll("h5")
+        y.forEach(function res(el) {
+            el.style.color = "blue"
+
+        });
+
+
+    }
+    document.querySelector("button+button+button+button").addEventListener("click", grn)
+    function grn() {
+        // console.log("someone clicked me")
+        let grn = document.querySelectorAll(".green")
+        grn.forEach(function cgrn(el) {
+            el.style.color = "green"
+
+        });
+
+    }
+    document.querySelector("button+button+button+button+button").addEventListener("click", chblu)
+    function chblu() {
+        // console.log("someone clicked me")
+        let bl = document.querySelectorAll(".red")
+        bl.forEach(function blues(el) {
+            el.style.color = "red"
+
+        });
+
+    }
+    document.querySelector("button+button+button+button+button+button").addEventListener("click", red)
+    function red() {
+        // console.log("someone clicked me")
+        let red = document.querySelectorAll(".blue")
+        red.forEach(function cred(el) {
+            el.style.color = "blue"
+
+        });
+
+
+    }
+
+
+
+
+
+</script>
