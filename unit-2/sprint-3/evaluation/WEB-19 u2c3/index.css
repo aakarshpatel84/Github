@@ -3,6 +3,7 @@
 table{
     width: 95%;
     height: 20px;
+    margin-top: 20px;
     
     
 }
@@ -18,5 +19,8 @@ td{
     margin: 20px;
     padding: 15px;
     background-color: #2b619e4d;
+}
+form{
+    display: inline-grid;
 }
 

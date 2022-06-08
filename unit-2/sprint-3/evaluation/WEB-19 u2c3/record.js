@@ -20,7 +20,6 @@ function myFunction(event) {
   td3.innerText = department;
   let td4 = document.createElement("td");
   td4.innerText = excperience;
-
   let td5 = document.createElement("td");
   td5.innerText = mail;
   let td6 = document.createElement("td");
@@ -33,7 +32,6 @@ function myFunction(event) {
   } else {
     td7.innerText = "Fresher";
   }
-
   let td8 = document.createElement("td");
   td8.innerText = "Delete";
   td8.style.backgroundColor = "red";
