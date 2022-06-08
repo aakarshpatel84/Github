@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age check" type="number" placeholder="Enter Your Age">
+    <button onclick="Submit()">Submit</button>
+    <p id="res">Display Age</p>
+</body>
+</html>
+<script>
+    function Submit(){
+        let userage = document.getElementById("age check").value
+        console.log(userage)
+        if (userage>18 ) {
+           
+            document.getElementById("res").innerText = ("You can drive in India!")
+
+            
+        }else if (userage<18){
+            
+            document.getElementById("res").innerText = ("You Can't drive in india ")
+        }
+        else{
+            
+            document.getElementById("res").innerText = ("You are just old enough to drive in India!")
+        }
+
+    }
+    
+</script>
