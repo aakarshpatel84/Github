@@ -2,6 +2,7 @@
 document.querySelector("form").addEventListener("submit", myFunction);
 let studentArr = JSON.parse(localStorage.getItem("studentData")) || [];
 
+
 function myFunction(event) {
   event.preventDefault();
   let studentObj = {
