@@ -1,0 +1,59 @@
+body{
+    background: linear-gradient(
+        to right, #3f5efb,rgba(245, 38, 11, 0.963)
+    )
+
+}
+.show-winner{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    
+}
+h1{
+    margin: 20px;
+    font-size: 6rem;
+    color: rgb(219, 204, 204);
+    text-align: center;
+}
+.player{
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    margin: 0px 50px;
+
+}
+p{
+    font-size: 2.5rem;
+    color: rgb(208, 214, 218);
+    text-align: center;
+
+}
+img{
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+button{
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    width: 200px;
+    padding: 10px;
+    /* border: 1px solid red; */
+    border-radius: 29px;
+    border: none;
+    transition-property: width, background-color,font-size,margin-bottom;
+    transition-duration: 1s,1s,1s,1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    
+}
+button:hover{
+    background-color: rgba(18, 246, 132, 0.963);
+    color: #fb4747;
+    width: 500px;
+    font-size: 50px;
+    
+    
+}
