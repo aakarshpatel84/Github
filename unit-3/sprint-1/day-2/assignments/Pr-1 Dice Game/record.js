@@ -43,17 +43,18 @@ function rolled() {
 
   //----------------------------Condition-----------------------------------
   if (firstRandomNum > secondRandomNum && firstRandomNum > thirdRandomNum) {
-    document.querySelector("h1").innerText = "Player 1 Is WInner";
+    document.querySelector("h1").innerText = "Member 1 Is WInner";
+    // document.querySelectorAll("img")[0].style.backgroundColor = "green";
   } else if (
     secondRandomNum > firstRandomNum &&
     secondRandomNum > thirdRandomNum
   ) {
-    document.querySelector("h1").innerText = "Player 2 Is WInner";
+    document.querySelector("h1").innerText = "Member 2 Is WInner";
   } else if (
     thirdRandomNum > firstRandomNum &&
     thirdRandomNum > secondRandomNum
   ) {
-    document.querySelector("h1").innerText = "Player 3 Is WInner";
+    document.querySelector("h1").innerText = "Member 3 Is WInner";
   } else {
     document.querySelector("h1").innerText = "Draw";
   }
