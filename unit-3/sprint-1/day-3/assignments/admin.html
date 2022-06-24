@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" placeholder="Enter Product Name" id="name">
+        <select id="category">
+            <option value="Jackets and coats">Jackets and coats.</option>
+            <option value="Trousers and shorts">Trousers and shorts.</option>
+            <option value="Suits">Suits</option>
+            <option value="Skirts and dresses">Skirts and dresses</option>
+            <option value=" boots">boots</option>
+            <option value="Sweaters and waistcoats">Sweaters and waistcoats</option>
+            <option value="slippers">slippers</option>
+        </select>
+        <img src="" alt="image" id="image">
+        <input type="number" placeholder="Enter Price" id="price">
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+
+        </select>
+        Item Sold? <input type="checkbox" name="item sold" id="sold">
+        <!-- <p>Is it solid</p>
+        <input type="checkbox" name="Sold" id="Sold">
+
+        </select> -->
+        <input type="submit">
+    </form>
+</body>
+
+</html>
+<script>
+    let formTag = document.querySelector("form").addEventListener("submit", myFun)
+    function myFun(event) {
+        let objArr = JSON.parse(localStorage.getItem("product_data")) || [];
+        event.preventDefault()
+        // let formTag = document.querySelector("form")
+        let produc = document.getElementById("name").value
+        let ca = document.getElementById("category").value
+        let avata = document.getElementById("image").value
+        let pricin = document.getElementById("price").value
+        let Gende = document.getElementById("gender").value
+        let sol = document.getElementById("sold").value
+        let showAllData = new allData(produc, ca, avata, pricin, Gende, sol)
+        objArr.push(showAllData)
+        localStorage.setItem("product_data", JSON.stringify(objArr))
+
+    }
+    function allData(p, c, a, d, e, sd) {
+        this.product = p
+        this.Category = c
+        this.avatar = a
+        this.price = d
+        this.gender = e
+        this.Sold = sd
+
+    }
+</script>

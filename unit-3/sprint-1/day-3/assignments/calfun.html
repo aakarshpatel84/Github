@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call function</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let Person1 = {
+        name: "Amar",
+        skill: "singer",
+        live: "Goa",
+
+        sing: function (order) {
+            console.log(`My name is ${this.name} and i am ${order}`);
+        },
+    };
+    let Person2 = {
+        name: "Akbar",
+        skill: "chef",
+        live: "mumbai",
+        foodMaker: function (order) {
+            console.log(`My name is ${this.name} and i am ${order}`)
+        }
+    };
+    let Person3 = {
+        name: "Anthony",
+        skill: "Magician",
+        live: "Kashmir",
+        magic: function (order) {
+            console.log(`My name is ${this.name} and i am ${order}`)
+        }
+    };
+    Person1.sing.call(Person2, "singer");
+    Person2.foodMaker.call(Person3, "chef")
+    Person3.magic.call(Person1, "Magician")
+</script>
