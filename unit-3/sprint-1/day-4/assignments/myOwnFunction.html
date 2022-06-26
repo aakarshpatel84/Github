@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Polymerphism</title>
+</head>
+
+<body>
+    <h1>1. Go Inspect Mode. </h1>
+    <h1> 2.Check Output In Console</h1>
+</body>
+
+</html>
+
+<script>
+
+    // Create your custom map method (myMap), which will work exactly similar to Array.map().
+    let arr1 = [1, 2, 3, 4];
+    let arr2 = arr1.map(function (elem) {
+        return elem * 2;
+    });
+    console.log(arr2);
+
+    // custom constructor functions/methods Array.map()
+    Array.prototype.myMap = function (func) {
+        let maped = [];
+        for (let i = 0; i <= this.length - 1; i++) {
+            let element = this[i];
+            let x = func(element);
+            maped.push(x);
+        }
+        return maped;
+    }
+
+    let arr3 = arr1.myMap(function (elem) {
+        return elem * 2;
+    })
+    console.log(arr3); //myMap works as same as map method and each element is doubled in the arr3
+    //____________________________________________________________________________________________________________________________________
+
+
+    // Create custom forEach method (myForEach), which will work exactly similar to Array.forEach().
+
+
+    let arr4 = [1, 2, 3, 4];
+    arr4.forEach(function (elem) {
+        console.log(elem * 2);
+    });
+
+
+    //lets create a custom constructor functions/methods  Array.forEach()
+    Array.prototype.myForEach = function (func) {
+        for (let i = 0; i <= this.length - 1; i++) {
+            let element = this[i];
+            func(element);
+        }
+    }
+
+    //myForEach works as same as forEach method and each element is doubled in the arr4
+    arr4.myForEach(function (elem) {
+        console.log(elem * 2);
+    });
+
+    //------------------------------------------------------------------------------------
+
+    //  custom filter method (myFilter), which will work exactly similar to Array.filter().
+
+    let arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let odd = arr5.filter(function (elem) {
+        return elem % 2 !== 0;
+    })
+    console.log(odd);
+
+    //lets create a custom constructor functions/methods  [Array.filter()]
+    Array.prototype.myFilter = function (func) {
+        let filtered = [];
+        for (let i = 0; i <= this.length - 1; i++) {
+            let element = this[i];
+            if (func(element)) {
+                filtered.push(element)
+            }
+
+        }
+        return filtered;
+    }
+
+    let myOdd = arr5.myFilter(function (elem) {
+        return elem % 2 !== 0;
+    })
+    console.log(myOdd);
+
+    //_____________________________________________________________________________________________________________
+
+    // Create your custom reduce method (myReduce), which will work exactly similar to Array.reduce().
+
+    let arr6 = [1, 2, 3, 4, 5];
+    let product = arr6.reduce(function (acc, elem) {
+        return acc * elem;
+    })
+    console.log(product);
+
+    //lets create a custom constructor functions/methods  Array.reduce()
+    Array.prototype.myReduce = function (func) {
+        let reduced = 0;
+        for (let i = 0; i <= this.length - 1; i++) {
+            let element = this[i];
+            func(reduced += element, element);
+        }
+    }
+
+    let myProduct = arr6.myReduce(function (acc, elem) {
+        return acc * elem;
+    })
+    console.log(myProduct);
+
+</script>
