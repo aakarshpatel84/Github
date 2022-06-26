@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOMOBILE INHERITANCE MODEL</title>
+</head>
+
+<body>
+    <h1>1. Go Inspect Mode. </h1>
+    <h1> 2.Check Output In Console</h1>
+
+</body>
+
+</html>
+<script>
+
+
+    let car1 = {
+        Name: "Swift",
+        Engine_Type: "TypeK Series Dual jet",
+        Displacement: 1197,
+        Max_Power: "88.50bhp@6000rpm",
+        Max_Torque: "113Nm@4400rpm",
+        Cylinder: 4,
+        Transmission_Type: "AutomaticGear",
+        Mileage: "21.0 kmp",
+        Fuel_type: "Petrol",
+        Front_Suspension: "Mac Pherson Strut",
+        Rear_Suspension: "Torsion BeamS",
+        teering_Type: "Electric",
+        Steering_Column: "Tilt",
+        Turning_Radius: 4.8,
+        Front_Brake_Type: "Disc",
+        Rear_Brake_Type: "Drum",
+
+    }
+    Object.prototype.addextraFetures = function (cn, cm, ft) {
+        this.carName = cn
+        this.carModel = cm
+        this.fuelType = ft
+    }
+    let add_New_Car = Object.create(car1)
+    add_New_Car.addextraFetures("Hyundai Creta", "Hyundai Creta ix25", "Diesel")
+    console.log(add_New_Car)
+</script>
