@@ -59,7 +59,7 @@ let movie_Arr = [
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/doctor-strange-in-the-multiverse-of-madness_wjx1jpyh_500x749.jpg?v=1649951107",
-    Movie_Name: "DOCTOR-STRANGE",
+    Movie_Name: "DOCTOR STRANGE",
     Rating: 8.9,
     release_date: "2022",
   },
@@ -80,7 +80,7 @@ let movie_Arr = [
   {
     box_image: "https://w.wallhaven.cc/full/49/wallhaven-49yxo8.jpg",
     Rating: 4.1,
-    Movie_Name: "Mad max",
+    Movie_Name: "MAD MAX",
     release_date: "2015",
   },
 ];

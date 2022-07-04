@@ -10,18 +10,25 @@ body{
 }
 
 
-
+#nevbar{
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
 ul{
     
     border: 1px solid black;
-     width: 95%;
+     width: 98%;
     background-color: rgb(26 26 26);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 50px;
-    
     margin: auto;
+    /* position: -webkit-sticky; /* Safari 
+  position: sticky;
+  top: 0; */
 }
 
     li{
@@ -34,13 +41,13 @@ ul{
 a{
     text-decoration: none;
 
-    color: wheat;
+    color: rgba(255, 255, 255, 0.655);
     margin-right: 30px;
    
 }
 a:hover{
-    color: teal;
-    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.525);
+    /* text-decoration: underline; */
 }
 
 /* ----------------------------------------------------------------- */
@@ -121,18 +128,18 @@ p{
     width: 100%;
 }
 #sortNames{
-    display: flex;
-  
 
-   
     padding: 10px;
     margin: 20px;
     margin-right: 10px;
-    background-color: rgba(128, 128, 128, 0.905);
+    background-color: rgba(160, 137, 137, 0.799);
 
-    border: 1px solid gray;
-    text-decoration: none;
+    border: 1px solid black;
+    /* text-decoration: none; */
+    padding: 10px;
+    /* border-style: none; */
     font-weight: bold;
+    color: black;
     
 }
 button{

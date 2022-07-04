@@ -14,7 +14,7 @@ function filtring() {
 displayData(arrFormsLS);
 
 function displayData(arrFormsLS) {
-  arrFormsLS.forEach(function (elem) {
+  arrFormsLS.forEach(function (elem, index) {
     let tr = document.createElement("tr");
 
     let td1 = document.createElement("td");
