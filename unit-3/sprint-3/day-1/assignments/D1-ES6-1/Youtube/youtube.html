@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasta yt</title>
+</head>
+<style>
+    #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        margin-top: 30px;
+
+    }
+</style>
+
+<body>
+    <h1>Sasta Youtube</h1>
+    <input type="text" id="query">
+    <button onclick="search()">Search</button>
+    <div id="container"></div>
+</body>
+
+</html>
+<script>
+    //API_KEY = "AIzaSyDnIFnsB1Uh-dIVSBHpZr5QLe1RN87FOFk"
+    //url =  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=kgf&key=AIzaSyDnIFnsB1Uh-dIVSBHpZr5QLe1RN87FOFk'
+
+
+    //This is Begining-------
+
+    let search = async () => {
+        let query = document.getElementById("query").value
+        let data = await getData(query)
+
+        //invoking getData function
+        displayData(data);
+
+    }
+
+    let getData = async (query) => {
+        let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=AIzaSyDnIFnsB1Uh-dIVSBHpZr5QLe1RN87FOFk`
+
+
+        //fetching data
+        let res = await fetch(url)
+
+        // collecting data
+        let data = await res.json();
+        return data.items
+        // console.log(data)
+
+
+        console.log('data: ', data);
+
+    }
+
+    let displayData = (data) => {
+        let container = document.getElementById("container");
+        container.innerHTML = null;
+        data.forEach(el => {
+
+            let img = document.createElement("img")
+            img.src = el.snippet.thumbnails.medium.url
+
+            let title = document.createElement("h3")
+            title.innerText = el.snippet.title
+
+            let div = document.createElement("div")
+            div.onclick = () => {
+
+                saveVideo(el)
+
+            }
+
+            div.append(img, title)
+            container.append(div)
+
+
+        });
+    }
+
+    let saveVideo = (data) => {
+        localStorage.setItem("video", JSON.stringify(data))
+        location.href = 'video.html'
+    }
+
+
+
+
+
+
+
+
+</script>
