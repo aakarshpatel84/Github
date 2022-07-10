@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  let arr = new Array(1, 2, 3);
+  arr = [1, 2, 3, 4];
+
+  //Own console.log()
+  Array.prototype.Namaskar = function () {
+    console.log("Hello world");
+  };
+  // arr.Namaskar();
+  //___________________________________________________//
+
+  //Own (Push)
+  Array.prototype.पेलो = function (value) {
+    let index = arr.length;
+    this[index] = value;
+  };
+  arr.पेलो(6);
+  // console.log(arr);
+  //_________________________________________________//
+
+  //Own (Pop)
+  Array.prototype.निकालो = function (value) {
+    arr.pop(value);
+  };
+  arr.निकालो();
+  // console.log(arr);
+  //_________________________________________________//
+
+  //Own (forEach)
+  Array.prototype.हरएक = function (value) {
+    for (i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
+  };
+  // arr.हरएक();
+  //_________________________________________________//
+
+  //filter()
+  Array.prototype.myFilter = function (value) {
+    for (i = 0; i < arr.length; i++) {
+      if (i % 2 == 0) {
+        console.log(arr[i]);
+      }
+    }
+  };
+  arr.myFilter();
+  //_________________________________________________//
+
+  //map()
+  Array.prototype.myMap = function (value) {
+    blanckArr = [];
+
+    for (i = 0; i < arr.length; i++) {
+      blanckArr.push(arr[i]);
+    }
+    console.log("blanckArr: ", blanckArr);
+  };
+  arr.myMap();
+  //_________________________________________________//
+
+  //reduce()
+  Array.prototype.myReduce = function (value) {
+    sum = 0;
+    for (i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    console.log(sum);
+  };
+  arr.myReduce();
+
+  // console.log(arr);
+</script>
