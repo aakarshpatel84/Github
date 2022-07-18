@@ -126,6 +126,10 @@ p{
     text-align: center;
     margin: auto;height: 400px;
     width: 100%;
+    image-resolution: from-image;
+    image-resolution: 300dpi;
+    image-resolution: from-image 300dpi;
+    image-resolution: 300dpi snap;
 }
 #sortNames{
 

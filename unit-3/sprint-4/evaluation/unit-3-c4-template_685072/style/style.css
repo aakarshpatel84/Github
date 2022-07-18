@@ -1,0 +1,49 @@
+#nevbar{
+    border: 1px solid red;
+    display: flex;
+}
+input{
+    height: 10%;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 40%;
+}
+button{
+    height: 10%;
+    margin-top: 20px;
+    display: block;
+    
+}
+#sidebar{
+border: 1px solid red;
+/* height: 260px; */
+  /* display: flex; */
+}
+#sidebar>button{
+    width: 10%;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+  
+}
+ #news{
+    border: 1px solid red;
+    height: 600px;
+     /* width: 70%; */
+    /* height: 20px; */
+    margin-left: 200px;
+
+    margin-top: -207px; 
+    overflow: scroll;
+
+
+}
+#news>div{
+    gap: 10px;
+}
+  
+
+img{
+    height: 50%;
+    width: 50%;
+}

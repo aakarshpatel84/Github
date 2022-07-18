@@ -1,6 +1,6 @@
 //Data for slide show
 let poster = [
-  " https://w.wallhaven.cc/full/ne/wallhaven-ne8gyk.jpg",
+  " https://w.wallhaven.cc/full/xl/wallhaven-xly6jl.jpg",
 
   "https://w.wallhaven.cc/full/4y/wallhaven-4y861x.jpg",
 
@@ -23,63 +23,63 @@ let poster = [
 let movie_Arr = [
   {
     box_image:
-      "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/5afeb8388cc2b8ecedad82c5179a833d_0153b77b-a6a2-4644-b5bb-191f5728ec9d_500x749.jpg?v=1573617533",
-    Movie_Name: "PIKACHU",
-    Rating: 8.3,
-    release_date: "2019",
+      "https://i.pinimg.com/564x/ba/46/d0/ba46d054ed6b8ad0ce1a1a3420fcdc3a.jpg",
+    Movie_Name: "BLADE RUNNER",
+    Rating: 8.1,
+    release_date: "1982",
   },
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/a367af8b717f224288f8664c7cf100f3_97fe025c-7bb8-41e2-bc39-8387f905d075_500x749.jpg?v=1573572646",
     Movie_Name: "LION KING",
-    Rating: 8.7,
+    Rating: 6.8,
     release_date: "2019",
   },
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/726b1b0e4005ab2219e31b5582e0602a_500x749.jpg?v=1573572660",
     Movie_Name: "KNIVES OUT",
-    Rating: 6.1,
+    Rating: 7.9,
     release_date: "2019",
   },
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/uncharted_8yb5nwo0_500x749.jpg?v=1648225108",
     Movie_Name: "UNCHARTED",
-    Rating: 7.5,
+    Rating: 6.4,
     release_date: "2022",
   },
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/d5cfdab5162ce79515c10c48b0c19cfe_ee891663-d226-4b27-901d-1451101eff10_500x749.jpg?v=1573617424",
     Movie_Name: "MOONLIGHT",
-    Rating: 6.9,
+    Rating: 7.4,
     release_date: "2016",
   },
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/doctor-strange-in-the-multiverse-of-madness_wjx1jpyh_500x749.jpg?v=1649951107",
     Movie_Name: "DOCTOR STRANGE",
-    Rating: 8.9,
+    Rating: 7.1,
     release_date: "2022",
   },
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/5e9dcc981a25b981d27721b974d76e4d_500x749.jpg?v=1573591610",
-    Rating: 5.5,
+    Rating: 6.6,
     Movie_Name: "PIRATES OF CARIBBEAN",
     release_date: "2011",
   },
   {
     box_image:
       "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/6b7875d4a6fd687a6ad6260fd1fb5912_25269cc5-1aba-463c-b7d4-bcd664afa9eb_500x749.jpg?v=1573651487",
-    Rating: 4.2,
+    Rating: 5.3,
     Movie_Name: "JUPITER ASCENDING",
     release_date: "2018",
   },
   {
     box_image: "https://w.wallhaven.cc/full/49/wallhaven-49yxo8.jpg",
-    Rating: 4.1,
+    Rating: 8.1,
     Movie_Name: "MAD MAX",
     release_date: "2015",
   },

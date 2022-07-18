@@ -10,15 +10,8 @@ fetch(url)
   .catch(function (err) {
     console.log(err);
   });
-// displayData(data);
-let obj = JSON.parse(localStorage.getItem("cart_item"));
 function displayData(data) {
-  function myFun() {
-    console.log("hyy");
-
-    localStorage.setItem("cart_item", JSON.stringify(data));
-  }
-  document.getElementById("container").innerHTML = "";
+  // document.getElementById("container").innerHTML = "";
   let x = document.getElementById("container");
   data.forEach((elem) => {
     let box = document.createElement("div");
@@ -37,11 +30,28 @@ function displayData(data) {
     btn.setAttribute("class", "add_to_cart");
     btn.innerText = "Add to cart";
 
-    btn.addEventListener("click", myFun);
-
     box.append(img, product_name, product_price, btn);
     x.append(box);
+
+    btn.addEventListener("click", function () {
+      // console.log("hyy");
+      productName(elem);
+
+      // let cartData = JSON.stringify(localStorage.getItem("cart_item"));
+    });
   });
 }
 
-// myFun();
+// displayData(data);
+// // myFun();
+// console.log(data);
+
+// let obj = JSON.parse(localStorage.getItem("cart_item"));
+
+// localStorage.setItem("cart_item", JSON.stringify(elem));
+let blankArr = [];
+function productName(elem) {
+  console.log("elem: ", elem);
+  blankArr.push(elem);
+  localStorage.setItem("cart_item", JSON.stringify(blankArr));
+}
